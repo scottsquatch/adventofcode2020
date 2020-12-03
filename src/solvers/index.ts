@@ -1,11 +1,15 @@
 import fs from 'fs';
 import { Solver } from './types';
 import * as day1 from './day1';
+import * as day2 from './day2';
 
 const solve = async (day: number): Promise<void> => {
   switch (day) {
     case 1:
       await doSolve(1, day1.solvePart1, day1.solvePart2);
+      break;
+    case 2:
+      await doSolve(2, day2.solvePart1, day2.solvePart2);
       break;
     default:
       console.log(`Day ${day} is currently not handled`);
