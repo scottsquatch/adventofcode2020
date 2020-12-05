@@ -16,3 +16,5 @@ export const combinations = <T>(n: number, arr: Array<T>): Array<Array<T>> => {
 
   return combinationsRecurse(n, arr);
 };
+
+export const hasAllProperties = <T extends unknown>(props: Array<string>, obj: T): boolean => props.every((prop: string) => prop in obj);
