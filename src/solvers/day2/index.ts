@@ -62,4 +62,4 @@ export const solvePart2 = (input: string): void => {
 
   const validPasswords = getValidPasswords(input);
   console.log('part 2 answer:', validPasswords.length);
-}
+};
