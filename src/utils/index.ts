@@ -24,6 +24,20 @@ export const except = fp.curry(<T extends unknown>(item: T) => fp.reject(fp.eq(i
 
 export const splitLine = fp.split('\n');
 
+export const removeBlank = fp.remove((line: string): boolean => !line || line === '');
+
 export const splitSpacedLines = fp.split('\n\n');
 
 export const reduceFirstElement = <T extends unknown>(accumulator: (accum: T, val: T) => T): fp.LodashReduce1x3<T, T | undefined> => fp.reduce((a: T | undefined, v: T) => a ? accumulator(a, v) : v, undefined);
+
+export const print = <T extends unknown>(val: T): T => {
+  console.log(val);
+  return val;
+}
+
+export const timeFunc = <T extends unknown>(func: () => T): [T, number] => {
+  const start = new Date().getTime();
+  var res = func();
+  const elapsed = new Date().getTime() - start;
+  return [res, elapsed];
+}
