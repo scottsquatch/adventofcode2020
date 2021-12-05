@@ -35,6 +35,8 @@ export const print = <T extends unknown>(val: T): T => {
   return val;
 }
 
+export const sum = (arr: Array<number>): number => arr.reduce((t: number, v: number) => v + t);
+
 export const timeFunc = <T extends unknown>(func: () => T): [T, number] => {
   const start = new Date().getTime();
   var res = func();
