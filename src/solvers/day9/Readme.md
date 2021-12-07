@@ -1,5 +1,5 @@
 # Day 9
-## Part 2
+## Part 1
 
 Okay so this is where I got stuck last year. I could figure out a good solution, but was having trouble translating into a functional answer. So this is a class of problem that is very common in interviewing: find x numbers that sum to value. The idea is to store the values in a map/set, iterate over elements, subtract the current value from the iterand and see if the value is in the map/set. We will need to make sure that we account for not double-counting values. Which can be done by using a frequency map to hold them: [number] -> [times that number appears in sequence]
 
