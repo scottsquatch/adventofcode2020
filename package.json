@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "commander": "^6.2.0",
+    "jslint": "^0.12.1",
     "lodash": "^4.17.20"
   }
 }
