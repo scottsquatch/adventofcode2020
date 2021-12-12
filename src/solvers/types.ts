@@ -41,3 +41,8 @@ export class Graph<V>
       return other;
   }
 }
+
+export interface Point {
+  x: number;
+  y: number;
+}
