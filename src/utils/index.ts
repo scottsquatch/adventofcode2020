@@ -62,3 +62,12 @@ export const timeFunc = <T extends unknown>(func: () => T): [T, number] => {
   const elapsed = new Date().getTime() - start;
   return [res, elapsed];
 }
+
+/**
+ *  Perform a left shift on num, times times. 
+ *  Saves the hassle of having to cast numbers to bigints
+ * @param num 
+ * @param times 
+ * @returns 
+ */
+export const bigLeftShift = (num: number, times: number): bigint => BigInt(num) << BigInt(times);
