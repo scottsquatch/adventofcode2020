@@ -46,3 +46,14 @@ export interface Point {
   x: number;
   y: number;
 }
+
+export enum GameOfLifeCellState {
+  Active,
+  Inactive
+};
+
+export interface GameOfLifeState {
+  pointMap: Map<string, GameOfLifeCellState>; 
+  maxCoords: Array<number>;
+  minCoords: Array<number>;
+}

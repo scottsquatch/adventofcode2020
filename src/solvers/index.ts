@@ -15,6 +15,7 @@ import * as day12 from './day12';
 import * as day13 from './day13';
 import * as day14 from './day14';
 import * as day15 from './day15';
+import * as day17 from './day17';
 
 const solve = async (day: number): Promise<void> => {
   switch (day) {
@@ -62,6 +63,9 @@ const solve = async (day: number): Promise<void> => {
       break;
     case 15:
       await doSolve(15, day15.solvePart1, day15.solvePart2);
+      break;
+    case 17:
+      await doSolve(17, day17.solvePart1, day17.solvePart2);
       break;
     default:
       console.log(`Day ${day} is currently not handled`);

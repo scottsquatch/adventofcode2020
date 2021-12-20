@@ -71,3 +71,7 @@ export const timeFunc = <T extends unknown>(func: () => T): [T, number] => {
  * @returns 
  */
 export const bigLeftShift = (num: number, times: number): bigint => BigInt(num) << BigInt(times);
+
+export const toKeys = <K,V>(map: Map<K,V>): Array<K> => Array.from(map.keys());
+export const toValues = <K,V>(map: Map<K,V>): Array<V> => Array.from(map.values());
+export const toEntries = <K,V>(map: Map<K,V>): Array<[K,V]> => Array.from(map.entries());
