@@ -39,6 +39,11 @@ export const print = <T extends unknown>(val: T): T => {
   return val;
 }
 
+export const addIndex = <T extends unknown>(arr: Array<T>): Array<[number, T]> => {
+  let index = 0;
+  return fp.map((val: T): [number, T] => [index++, val])(arr);
+}
+
 /**
  * Create a map from an array
  * @param keyFunc determine the key for the map from the array value
@@ -75,3 +80,5 @@ export const bigLeftShift = (num: number, times: number): bigint => BigInt(num) 
 export const toKeys = <K,V>(map: Map<K,V>): Array<K> => Array.from(map.keys());
 export const toValues = <K,V>(map: Map<K,V>): Array<V> => Array.from(map.values());
 export const toEntries = <K,V>(map: Map<K,V>): Array<[K,V]> => Array.from(map.entries());
+
+export const includesAny = <V>(values: Array<V>) => (array: Array<V>) => fp.some((val: V) => fp.includes(val)(array))(values);
